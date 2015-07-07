@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE grammar >
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar"
+         xml:lang="zh-CN" version="1.0" root="xm_root" mode="voice">
+
+   <rule id="verb" scope="public">
+     <one-of>
+       <item>put</item>
+       <item>find</item>
+       <item>navegation</item>
+       <item>catch</item>
+       <item>give</item>
+       <item>bring</item>
+       <item>move</item>
+     </one-of>
+   </rule>
+
+   <rule id="object" scope="public">
+     <one-of>
+       <item>the manualwater</item>
+       <item>the Spirit</item>
+       <item>the Coke</item>
+       <item>the milk</item>
+       <item>the soap</item>
+       <item>the nutmilk</item>
+     </one-of>
+   </rule>
+
+   <rule id="location" scope="public">
+     <one-of>
+       <item>in the kitchen</item>
+       <item>to the kitchen</item>
+       <item>on the table</item>
+       <item>on the kitchen table</item>
+       <item>on the bedroom table</item>
+       <item>on the livingroom table</item>
+       <item>on the dinningroom table</item>
+       <item>to the dinningroom</item>
+       <item>in the dinningroom</item>
+       <item>to the bedroom</item>
+       <item>in the bedroom</item>
+       <item>to the livingroom</item>
+       <item>in the livingroom</item>
+     </one-of>
+   </rule>
+
+   <rule id="me" scope="public">
+     <one-of>
+       <item>me</item>
+     </one-of>
+   </rule>
+
+   <!-- Reference by URI to a local rule -->
+   <!-- Artificial example allows "put, cup"! -->
+   <rule id="xm_root_single" scope="public">
+     <one-of>
+	<item>
+	    <ruleref uri="#verb"/> <ruleref uri="#me"/> <ruleref uri="#object"/>
+	</item>
+	<item>
+	    <ruleref uri="#verb"/> <ruleref uri="#object"/> <ruleref uri="#location"/>
+	</item>
+	<item>
+	    <ruleref uri="#verb"/> <ruleref uri="#location"/>
+	</item>
+
+     </one-of>
+   </rule>
+
+   <rule id="p" scope="public">
+     <one-of>
+       <item>and</item>
+       <item>then</item>
+       <item></item>
+     </one-of>
+   </rule>
+
+   <rule id="xm_root" scope="public">
+     <one-of>
+	
+	<item>
+	    <ruleref uri="#xm_root_single"/>
+	</item>
+
+     </one-of>
+   </rule>
+</grammar>

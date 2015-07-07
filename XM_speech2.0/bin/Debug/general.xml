@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE grammar >
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar"
+         xml:lang="zh-CN" version="1.0" root="xm_root" mode="voice">
+
+   <rule id="verb" scope="public">
+     <one-of>
+       <item>·Å </item>
+       <item>ÄÃ </item>
+       <item>¸ø </item>
+     </one-of>
+   </rule>
+
+   <rule id="object" scope="public">
+     <one-of>
+       <item>²è±­ </item>
+       <item>¿ÉÀÖ </item>
+       <item>¹· </item>
+     </one-of>
+   </rule>
+
+   <rule id="location" scope="public">
+     <one-of>
+       <item>³ø·¿Àï </item>
+       <item>ÎÔÊÒÀï </item>
+       <item>¿ÍÌüÀï </item>
+       <item>²ÍÌüÀï </item>
+     </one-of>
+   </rule>
+
+   <rule id="me" scope="public">
+     <one-of>
+       <item>ÎÒ </item>
+     </one-of>
+   </rule>
+
+   <!-- Reference by URI to a local rule -->
+   <!-- Artificial example allows "put, cup"! -->
+   <rule id="xm_root_single" scope="public">
+     <one-of>
+	<item>
+	    <ruleref uri="#verb"/> <ruleref uri="#me"/> <ruleref uri="#object"/>
+	</item>
+	<item>
+	    <ruleref uri="#verb"/> <ruleref uri="#object"/> <ruleref uri="#location"/>
+	</item>
+	<item>
+	    <ruleref uri="#verb"/> <ruleref uri="#location"/>
+	</item>
+
+     </one-of>
+   </rule>
+
+   <rule id="p" scope="public">
+     <one-of>
+       <item>and</item>
+       <item>then</item>
+       <item></item>
+     </one-of>
+   </rule>
+
+   <rule id="xm_root" scope="public">
+     <one-of>
+	<item>
+	    <ruleref uri="#xm_root_single"/> <ruleref uri="#p"/> <ruleref uri="#xm_root_single"/> <ruleref uri="#p"/> <ruleref uri="#xm_root_single"/>
+	</item>
+	<item>
+	    <ruleref uri="#xm_root_single"/> <ruleref uri="#p"/> <ruleref uri="#xm_root_single"/> <ruleref uri="#p"/> <ruleref uri="#xm_root_single"/> <ruleref uri="#p"/> <ruleref uri="#xm_root_single"/>
+	</item>
+	<item>
+	    <ruleref uri="#xm_root_single"/> <ruleref uri="#p"/> <ruleref uri="#xm_root_single"/>
+	</item>
+	<item>
+	    <ruleref uri="#xm_root_single"/>
+	</item>
+
+     </one-of>
+   </rule>
+</grammar>

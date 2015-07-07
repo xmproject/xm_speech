@@ -1,0 +1,14 @@
+follow£º
+0x01£ºsetup already
+0x02£ºrecord compelete
+0x03£ºplease stand aside
+accident:
+0x11: what's the matter with you, my master
+0x12: please wait, let me bring you some medicine
+party:
+0x21: I know your order
+0x22: please come and get your order
+EGPSR: 
+0x00: I know what you said
+restarnt:
+0x00: I know what you said

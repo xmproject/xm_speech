@@ -1,0 +1,9 @@
+F:\XMcode\XM_speech2.0\XM_speech2.0\bin\Debug\XM_speech2.0.exe.config
+F:\XMcode\XM_speech2.0\XM_speech2.0\bin\Debug\XM_speech2.0.exe
+F:\XMcode\XM_speech2.0\XM_speech2.0\bin\Debug\XM_speech2.0.pdb
+F:\XMcode\XM_speech2.0\XM_speech2.0\obj\Debug\XM_speech2.0.csprojResolveAssemblyReference.cache
+F:\XMcode\XM_speech2.0\XM_speech2.0\obj\Debug\XM_speech2._0.Form1.resources
+F:\XMcode\XM_speech2.0\XM_speech2.0\obj\Debug\XM_speech2._0.Properties.Resources.resources
+F:\XMcode\XM_speech2.0\XM_speech2.0\obj\Debug\XM_speech2.0.csproj.GenerateResource.Cache
+F:\XMcode\XM_speech2.0\XM_speech2.0\obj\Debug\XM_speech2.0.exe
+F:\XMcode\XM_speech2.0\XM_speech2.0\obj\Debug\XM_speech2.0.pdb
